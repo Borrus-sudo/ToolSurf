@@ -4,6 +4,7 @@ export type Tool = {
     description: string;
     category: string;
     imgURL: string;
+    link: string;
 };
 
 export const categories = [
@@ -562,4 +563,339 @@ export const ai: Tool[] = [
     },
 ];
 
-export const tools: Tool[] = [...design, ...ai];
+const socialMedia: Tool[] = [
+    {
+        id: 'S-1',
+        name: 'Blaze',
+        description: 'Content Creation',
+        category: 'Social Media',
+        imgURL: 'https://framerusercontent.com/images/7XaopxjlJjh6xCls4TLL3ixXFxc.webp',
+        link: 'https://www.blaze.ai/',
+    },
+    {
+        id: 'S-2',
+        name: 'Glorify',
+        description: 'Design Tool',
+        category: 'Social Media',
+        imgURL: 'https://framerusercontent.com/images/2WIkEisu6jk6HzUscE0o6L0zdc.webp',
+        link: 'https://glorify.com/',
+    },
+    {
+        id: 'S-3',
+        name: 'SupaDemo',
+        description: 'Demo Creation',
+        category: 'Social Media',
+        imgURL: 'https://framerusercontent.com/images/q8p3yTSTSbB9lIJm8L1Vlfo3uQ.webp',
+        link: 'https://supademo.com/',
+    },
+    {
+        id: 'S-4',
+        name: 'Leonardo AI',
+        description: 'Generative AI',
+        category: 'Social Media',
+        imgURL: 'https://framerusercontent.com/images/ImkMa1GFAmiY0DC5jAsn3xOKXRc.webp',
+        link: 'https://leonardo.ai/',
+    },
+    {
+        id: 'S-5',
+        name: 'Opus',
+        description: 'Storytelling',
+        category: 'Social Media',
+        imgURL: 'https://framerusercontent.com/images/FEDsn3G4O9voiq2RvLTyYdV3yEc.webp',
+        link: 'https://www.opus.pro/',
+    },
+    {
+        id: 'S-6',
+        name: 'GetYarn.io',
+        description: 'Video Database',
+        category: 'Social Media',
+        imgURL: 'https://framerusercontent.com/images/ktrVo9GEcAFPRAsdEP6D8UyUz5A.webp',
+        link: 'https://getyarn.io/',
+    },
+    {
+        id: 'S-7',
+        name: 'VEED',
+        description: 'Video Editing',
+        category: 'Social Media',
+        imgURL: 'https://framerusercontent.com/images/Jiru6ZyEglqFpg5KHIOjT7OZC0.webp',
+        link: 'https://www.veed.io/',
+    },
+    {
+        id: 'S-8',
+        name: 'MemeLord',
+        description: 'Meme Resource',
+        category: 'Social Media',
+        imgURL: 'https://framerusercontent.com/images/kilpn3izUiU4VMeGoSC9N1wG64.webp',
+        link: 'https://memelord.tech/',
+    }
+];
+
+const Coding: Tool[] = [
+    {
+        id: 'Cod-1',
+        name: 'Replicate',
+        description: 'Ai Models',
+        category: 'Coding',
+        imgURL: 'https://framerusercontent.com/images/MWoX5tSpj8Vrdfut7fIb8aE.webp',
+        link: 'https://replicate.com/',
+    },
+    {
+        id: 'Cod-2',
+        name: 'ScrapingBee',
+        description: 'Web Scraping API',
+        category: 'Coding',
+        imgURL: 'https://framerusercontent.com/images/kaF0PZIc22dwlX0Mydb6nOpiU.webp',
+        link: 'https://www.scrapingbee.com/',
+    },
+    {
+        id: 'Cod-3',
+        name: 'Heatmap',
+        description: 'Analytics Tool',
+        category: 'Coding',
+        imgURL: 'https://framerusercontent.com/images/c1c42d47TAisakVFJcSnQk2C4g.webp',
+        link: 'https://www.heatmap.com/',
+    },
+    {
+        id: 'Cod-4',
+        name: 'Lusha',
+        description: 'Sales & Marketing',
+        category: 'Coding',
+        imgURL: 'https://framerusercontent.com/images/yswvuu7Upen81esLiRqCpmpFI.webp',
+        link: 'https://lp.lusha.com/',
+    },
+    {
+        id: 'Cod-5',
+        name: 'Eraser',
+        description: 'Ai Design Co-Pilot',
+        category: 'Coding',
+        imgURL: 'https://framerusercontent.com/images/ftaeNKuaZHA3qijwhUKWAxIJ9Ao.webp',
+        link: 'https://www.eraser.io/',
+    },
+    {
+        id: 'Cod-6',
+        name: 'Bolt.new',
+        description: 'App Development',
+        category: 'Coding',
+        imgURL: 'https://framerusercontent.com/images/fZ69p9h8WuMM7vbuFAcrQSvgeGQ.webp',
+        link: 'https://bolt.new/',
+    },
+    {
+        id: 'Cod-7',
+        name: 'GT Metrix',
+        description: 'Performance Analysis',
+        category: 'Coding',
+        imgURL: 'https://framerusercontent.com/images/zcIv28vH7ZXd07pncqiQkcTSu8.webp',
+        link: 'https://gtmetrix.com/',
+    },
+    {
+        id: 'Cod-8',
+        name: 'Giga AI',
+        description: 'Developer Tool',
+        category: 'Coding',
+        imgURL: 'https://framerusercontent.com/images/ih2vSd2j674BtHZxHotQdhf9Zc.webp',
+        link: 'https://gigamind.dev/',
+    }
+];
+
+const ecommerce: Tool[] = [
+    {
+        id: 'eco-1',
+        name: 'Fourthwall',
+        description: 'Dropshipping Service',
+        category: 'E-commerce',
+        imgURL: 'https://framerusercontent.com/images/VI4wGkl4EAlxmwW0eU5LmtHj4g.webp',
+        link: 'https://fourthwall.com/',
+    },
+    {
+        id: 'eco-2',
+        name: 'SquareSpace',
+        description: 'Web Builder',
+        category: 'E-commerce',
+        imgURL: 'https://framerusercontent.com/images/NJA6z3z6Yon9DVbAyjRaDgD2U.webp',
+        link: 'https://www.squarespace.com/',
+    },
+    {
+        id: 'eco-3',
+        name: 'Screen.Studio',
+        description: 'Screen Recording',
+        category: 'E-commerce',
+        imgURL: 'https://framerusercontent.com/images/uqTTKsvq5bhQYWJastBArzQ29gU.webp',
+        link: 'https://screen.studio/',
+    },
+    {
+        id: 'eco-4',
+        name: 'Posthog',
+        description: 'Analytics',
+        category: 'E-commerce',
+        imgURL: 'https://framerusercontent.com/images/GlXpwyNOV4R5emrassRA5UwTMYU.webp',
+        link: 'https://posthog.com/',
+    },
+    {
+        id: 'eco-5',
+        name: 'SamCart',
+        description: 'E-Commerce',
+        category: 'E-commerce',
+        imgURL: 'https://framerusercontent.com/images/VAgP8a4dimkctfU7LAKXMadjaTA.webp',
+        link: 'https://www.samcart.com/',
+    },
+    {
+        id: 'eco-6',
+        name: 'Framer',
+        description: 'Web Builder',
+        category: 'E-commerce',
+        imgURL: 'https://framerusercontent.com/images/4mtjDqRkzDjrnnMVyiN3xBRcF2w.webp',
+        link: 'https://www.framer.com/',
+    },
+    {
+        id: 'eco-7',
+        name: 'Soona',
+        description: 'Content Creation',
+        category: 'E-commerce',
+        imgURL: 'https://framerusercontent.com/images/J8V42fb5mGKHFAgfI2lGrSdL8.webp',
+        link: 'https://soona.co/',
+    },
+    {
+        id: 'eco-8',
+        name: 'Shopify',
+        description: 'Web Builder',
+        category: 'E-commerce',
+        imgURL: 'https://framerusercontent.com/images/qAHloQYbYmlHR6kuSfMv6Fe6aU.webp',
+        link: 'https://www.shopify.com/',
+    }
+];
+
+const video: Tool[] = [
+    {
+        id: 'vid-1',
+        name: 'Pritzels',
+        description: 'Thumbnails',
+        category: 'Video',
+        imgURL: 'https://framerusercontent.com/images/3lQUChBBZ9ZihHFMMwTF1uT3Hk.webp',
+        link: 'https://pikzels.com/',
+    },
+    {
+        id: 'vid-2',
+        name: 'Luma Dream Machine',
+        description: 'Ai Video/Motion',
+        category: 'Video',
+        imgURL: 'https://framerusercontent.com/images/xgxfnPaxgUaZElHIYtruyLyPcA.webp',
+        link: 'https://lumalabs.ai/dream-machine',
+    },
+    {
+        id: 'vid-3',
+        name: 'Paper Animator',
+        description: 'Animation',
+        category: 'Video',
+        imgURL: 'https://framerusercontent.com/images/2jv5bAsJoSAhzX6TFO50udZTjE.webp',
+        link: 'https://paperanimator.com/',
+    },
+    {
+        id: 'vid-4',
+        name: 'Lummi',
+        description: 'Stock Images',
+        category: 'Video',
+        imgURL: 'https://framerusercontent.com/images/ppFCNUamM3bHzTPq323U1I41mM.webp',
+        link: 'https://www.lummi.ai/',
+    },
+    {
+        id: 'vid-5',
+        name: 'PlayPhrase.me',
+        description: 'Video Database',
+        category: 'Video',
+        imgURL: 'https://framerusercontent.com/images/knurigIqDvJfiZar4FUbUFTWw.webp',
+        link: 'https://www.playphrase.me/',
+    },
+    {
+        id: 'vid-6',
+        name: 'Runway',
+        description: 'Ai Tools',
+        category: 'Video',
+        imgURL: 'https://framerusercontent.com/images/naeG6BUh3UkpiWITgVGtf6HiK4.webp',
+        link: 'https://runwayml.com/',
+    },
+    {
+        id: 'vid-7',
+        name: 'Lucid',
+        description: 'Writing Tool',
+        category: 'Video',
+        imgURL: 'https://framerusercontent.com/images/W1onkQqKL84Pt6PHA8jx3kiU9Zg.webp',
+        link: 'https://www.getlucid.app/',
+    },
+    {
+        id: 'vid-8',
+        name: 'Celtx',
+        description: 'Film & Writing Tool',
+        category: 'Video',
+        imgURL: 'https://framerusercontent.com/images/Z2X1FdrVts0IR8NJPpmUPNNvhBU.webp',
+        link: 'https://www.celtx.com/',
+    }
+];
+
+const startup: Tool[] = [
+    {
+        id: 'sta-1',
+        name: 'Taskade',
+        description: 'Productivity Tool',
+        category: 'Startups',
+        imgURL: 'https://framerusercontent.com/images/B56jffC5FsdoALMhaBpyDejoo4.webp',
+        link: 'https://www.taskade.com/',
+    },
+    {
+        id: 'sta-2',
+        name: 'Loom',
+        description: 'Screen Recording',
+        category: 'Startups',
+        imgURL: 'https://framerusercontent.com/images/KYMgvX1awuhZo8ylHQdcCtN00.webp',
+        link: 'https://www.loom.com/',
+    },
+    {
+        id: 'sta-3',
+        name: 'Apollo',
+        description: 'AI Sales Platform',
+        category: 'Startups',
+        imgURL: 'https://framerusercontent.com/images/8CcH5zpkxqpd1vv08rfxfWB9Y.webp',
+        link: 'https://www.apollo.io/',
+    },
+    {
+        id: 'sta-4',
+        name: 'Fiverr',
+        description: 'Freelance',
+        category: 'Startups',
+        imgURL: 'https://framerusercontent.com/images/H42Ars9ZDFoFh7HVvcku9RlsBo.webp',
+        link: 'https://www.fiverr.com/',
+    },
+    {
+        id: 'sta-5',
+        name: 'PlayPhrase.me',
+        description: 'Video Database',
+        category: 'Startups',
+        imgURL: 'https://framerusercontent.com/images/knurigIqDvJfiZar4FUbUFTWw.webp',
+        link: 'https://www.playphrase.me/',
+    },
+    {
+        id: 'sta-6',
+        name: 'Runway',
+        description: 'Ai Tools',
+        category: 'Startups',
+        imgURL: 'https://framerusercontent.com/images/naeG6BUh3UkpiWITgVGtf6HiK4.webp',
+        link: 'https://runwayml.com/',
+    },
+    {
+        id: 'sta-7',
+        name: 'Lucid',
+        description: 'Writing Tool',
+        category: 'Startups',
+        imgURL: 'https://framerusercontent.com/images/W1onkQqKL84Pt6PHA8jx3kiU9Zg.webp',
+        link: 'https://www.getlucid.app/',
+    },
+    {
+        id: 'sta-8',
+        name: 'Celtx',
+        description: 'Film & Writing Tool',
+        category: 'Startups',
+        imgURL: 'https://framerusercontent.com/images/Z2X1FdrVts0IR8NJPpmUPNNvhBU.webp',
+        link: 'https://www.celtx.com/',
+    }
+];
+
+export const tools: Tool[] = [...design, ...ai, ...socialMedia, ...Coding, ...ecommerce, ...video];
